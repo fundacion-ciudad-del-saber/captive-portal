@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "square_spaces",
+  "info": {
+    "singularName": "square-space",
+    "pluralName": "square-spaces",
+    "displayName": "square space",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "instagram": {
+      "type": "string",
+      "required": true
+    },
+    "square_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::square-type.square-type",
+      "mappedBy": "square_spaces"
+    }
+  }
+}

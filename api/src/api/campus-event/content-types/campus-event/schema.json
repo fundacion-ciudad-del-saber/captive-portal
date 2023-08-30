@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campus_events",
+  "info": {
+    "singularName": "campus-event",
+    "pluralName": "campus-events",
+    "displayName": "Campus Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "cover": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Descripcion": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 2000
+    }
+  }
+}

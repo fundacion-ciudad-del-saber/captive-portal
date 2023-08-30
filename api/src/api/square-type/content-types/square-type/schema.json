@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "square_types",
+  "info": {
+    "singularName": "square-type",
+    "pluralName": "square-types",
+    "displayName": "square-type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "square_spaces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::square-space.square-space",
+      "inversedBy": "square_types"
+    }
+  }
+}
