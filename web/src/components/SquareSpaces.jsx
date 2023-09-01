@@ -8,7 +8,7 @@ export default function SquareSpaces() {
     const [squareSpaces, setSquareSpaces] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:1337/api/square-spaces?populate=*`).then((res) => {
+        axios.get(`https://admin.campus.ciudaddelsaber.org/api/square-spaces?populate=*`).then((res) => {
             setSquareSpaces(res.data);
         });
     }, []);
@@ -48,7 +48,7 @@ export default function SquareSpaces() {
                                 <img
                                     key={id}
                                     className="object-cover h-40 w-full"
-                                    src={`http://127.0.0.1:1337${item.attributes.formats.small.url}`}
+                                    src={`https://admin.campus.ciudaddelsaber.org${item.attributes.formats.small.url}`}
                                     alt={objArray.attributes.title}
                                 />
                             ))}

@@ -5,7 +5,7 @@ export default function ParkSpaces() {
     const [parkSpaces, setParkSpaces] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:1337/api/park-spaces?populate=*`).then((res) => {
+        axios.get(`https://admin.campus.ciudaddelsaber.org/api/park-spaces?populate=*`).then((res) => {
             setParkSpaces(res.data);
         });
     }, []);
@@ -22,7 +22,7 @@ export default function ParkSpaces() {
                         <img
                             key={id}
                             className="object-cover col-span-1 h-32 sm:h-28 w-full rounded-l-lg"
-                            src={`http://127.0.0.1:1337${item.attributes.formats.small.url}`}
+                            src={`https://admin.campus.ciudaddelsaber.org${item.attributes.formats.small.url}`}
                         />
                     ))}
                     <div className="p-2 col-span-2 flex flex-col justify-between w-full">
