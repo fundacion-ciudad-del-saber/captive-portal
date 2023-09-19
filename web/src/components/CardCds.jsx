@@ -10,9 +10,11 @@ const CardCds = () => {
                     <img width="100%" height="100%" src="./instagram.svg" alt="instagram-icon" className="h-6 fill-black" />
                 </a>
             </div>
-            <a href='https://ciudaddelsaber.org/audioguia-de-ciudad-del-saber/' className="py-1 px-2 w-32 sm:w-24 justify-center sm:text-xs text-sm bg-white rounded-md hover:bg-gray-200 text-gray-600 font-semibold flex items-center">
-                Ir al sitio web
-            </a>
+            <div>
+                <a href='https://ciudaddelsaber.org/audioguia-de-ciudad-del-saber/' className="py-1 px-2 sm:text-xs text-sm bg-white rounded-md hover:bg-gray-200 text-gray-600 font-semibold">
+                    Ir al sitio web
+                </a>
+            </div>
             <CdsIcon className={'absolute h-48 right-2 -bottom-16'} color={'#ffffff'} />
 
         </section>

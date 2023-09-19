@@ -5,19 +5,18 @@ import SquareSpaces from "./SquareSpaces"
 
 const CaptivePortal = () => {
     return (
-        <section className="max-w-3xl sm:rounded-3xl  mx-auto font-montserrat p-5 sm:grid sm:grid-cols-2 gap-x-4 bg-white">
+        <section className="max-w-3xl sm:rounded-3xl md:shadow-lg bg-white  mx-auto font-montserrat px-5 pb-8 sm:grid sm:grid-cols-2 gap-x-4 ">
             <div className="sm:col-sapn-1">
                 <div className="flex gap-1 items-end ">
-                    <img src="./cds.svg" alt="cds logo" className="h-12" />
-                    <h1 className="flex font-bold text-4xl bg-gradient-to-r from-plaza via-plaza to-pink-400 text-transparent bg-clip-text ">La Plaza CDS</h1>
+                    <img src="/cds-logo.svg" alt="Logo de Ciudad del Saber" className="md:-ml-9" />
                 </div>
-                <p className="text-sm py-2 text-gray-800 font-light">Explora el conocimiento en la Plaza de <br /> Ciudad del Saber</p>
+                <p className="text-sm pb-8 text-gray-800">Descubre la oferta comercial, gastronómica y de conveniencia de <a href="https://ciudaddelsaber.org/" className=" text-cds-azul font-bold">Ciudad del Saber</a></p>
                 <PrincipalSlider />
-                <CardCds />
+                <SquareSpaces />
             </div>
             <div className=" sm:pt-14">
-                <SquareSpaces />
                 <ParkSpaces />
+                <CardCds />
             </div>
         </section >
     )

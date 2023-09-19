@@ -28,13 +28,12 @@ export default function ParkSpaces() {
                     <div className="p-2 col-span-2 flex flex-col justify-between w-full">
                         <div className="flex justify-between items-center w-full">
                             <div>
-                                <p className="text-sm sm:text-xs text-gray-400">Disciplina</p>
                                 <h3 className="text-xl sm:text-lg font-bold text-gray-700">{objArray.attributes.title}</h3>
                             </div>
                             <img src="./tree.svg" />
                         </div>
-                        <a href={objArray.attributes.enlace} className="px-2 py-1 w-40 sm:w-36 sm:text-xs text-sm bg-lime-200 rounded-md hover:bg-lime-400 text-lime-600 font-semibold flex items-center">
-                            Alquilar espacio
+                        <a href={objArray.attributes.enlace} className="px-2 py-1 w-40 sm:w-36 sm:text-xs text-sm bg-cds-verdecaña rounded-md hover:bg-opacity-80 text-white font-semibold flex items-center">
+                        Ver oferta
                             <img src="./arrow.svg" className="h-6 sm:h-5 rotate-180" />
                         </a>
                     </div>

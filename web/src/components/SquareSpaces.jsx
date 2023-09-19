@@ -52,17 +52,12 @@ export default function SquareSpaces() {
                                     alt={objArray.attributes.title}
                                 />
                             ))}
-                            <a href={objArray.attributes.instagram} className="w-8 h-8 bg-white opacity-70 rounded-full absolute top-2 right-2 grid place-content-center">
-                                <img width="100%" height="100%" src="./instagram.svg" alt="instagram-icon" className="h-6 fill-black" />
+                            <a href={objArray.attributes.instagram} className="w-40 h-40 absolute top-2 right-2 flex justify-end ">
+                                <div className="bg-white opacity-70 h-8 w-8 grid place-content-center   rounded-full">
+                                    <img width="100%" height="100%" src="./instagram.svg" alt="instagram-icon" className="h-6 fill-black" />
+                                </div>
                             </a>
-                            <div className=" absolute bottom-2 left-2">
-                                <p className="text-md font-bold text-white">{objArray.attributes.title}</p>
-                                {objArray.attributes.square_types.data?.map((item, id) => (
-                                    <p className="text-xs text-gray-100" key={id}>
-                                        {item.attributes.title}
-                                    </p>
-                                ))}
-                            </div>
+                            
                         </div>
                     </div>
                 ))}
