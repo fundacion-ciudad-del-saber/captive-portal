@@ -13,7 +13,7 @@ export default function ParkSpaces() {
     return (
         <div className="pb-5 flex flex-col gap-4">
             <div className="pt-4 pb-2">
-                <h3 className="font-bold text-gray-700 text-2xl ">Espacios en el parque</h3>
+                <h3 className="font-bold text-gray-700 text-2xl ">Espacios en el campus</h3>
                 <p className=" text-sm text-gray-400">Alquila nuestras canchas y espacios de recreación</p>
             </div>
             {parkSpaces.data?.map((objArray, id) => (
@@ -30,7 +30,6 @@ export default function ParkSpaces() {
                             <div>
                                 <h3 className="text-xl sm:text-lg font-bold text-gray-700">{objArray.attributes.title}</h3>
                             </div>
-                            <img src="./tree.svg" />
                         </div>
                         <a href={objArray.attributes.enlace} className="px-2 py-1 w-40 sm:w-36 sm:text-xs text-sm bg-cds-verdecaña rounded-md hover:bg-opacity-80 text-white font-semibold flex items-center">
                         Ver oferta
