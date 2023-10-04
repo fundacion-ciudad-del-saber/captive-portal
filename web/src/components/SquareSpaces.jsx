@@ -39,7 +39,7 @@ export default function SquareSpaces() {
 
     return (
         <div className="pt-6">
-            <h3 className="sm:px-0 font-bold text-gray-700 text-2xl py-4 ">Descubre el campus</h3>
+            <h3 className="sm:px-0 font-bold text-gray-700 text-2xl py-4 ">¿Qué se te antoja?</h3>
             <Slider {...settings}>
                 {shuffleArray(squareSpaces.data)?.map((objArray) => (
                     <div key={objArray.id} className="px-2 pb-6 relative">

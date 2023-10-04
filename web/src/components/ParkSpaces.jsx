@@ -13,8 +13,7 @@ export default function ParkSpaces() {
     return (
         <div className="pb-5 flex flex-col gap-4">
             <div className="pt-4 pb-2">
-                <h3 className="font-bold text-gray-700 text-2xl ">Espacios en el campus</h3>
-                <p className=" text-sm text-gray-400">Alquila nuestras canchas y espacios de recreación</p>
+                <h3 className="font-bold text-gray-700 text-2xl ">Un espacio para cada necesidad</h3>
             </div>
             {parkSpaces.data?.map((objArray, id) => (
                 <div key={id} className="grid grid-cols-3 h-32 sm:h-28 rounded-lg shadow-md ">
