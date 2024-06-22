@@ -8,7 +8,7 @@ const PrincipalSlider = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://back.campus.ciudaddelsaber.org/api/campus-events?populate=*`).then((res) => {
+        axios.get(`https://admin.campus.ciudaddelsaber.org/api/campus-events?populate=*`).then((res) => {
             setEvents(res.data);
         });
     }, []);
@@ -32,7 +32,7 @@ const PrincipalSlider = () => {
                         <img
                             key={id}
                             className="object-cover h-[360px]  w-full rounded-lg"
-                            src={`https://back.campus.ciudaddelsaber.org${item.attributes.formats.small.url}`}
+                            src={`https://admin.campus.ciudaddelsaber.org${item.attributes.formats.small.url}`}
                             width="100%"
                             height="100%"
                             alt={objArray.attributes.Title}
