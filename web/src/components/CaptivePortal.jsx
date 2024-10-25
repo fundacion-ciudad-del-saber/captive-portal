@@ -2,6 +2,7 @@ import CardCds from "./CardCds"
 import ParkSpaces from "./ParkSpaces"
 import PrincipalSlider from "./PrincipalSlider"
 import SquareSpaces from "./SquareSpaces"
+import Survey from "./Survey"
 
 const CaptivePortal = () => {
     return (
@@ -13,8 +14,10 @@ const CaptivePortal = () => {
                 <p className="text-sm pb-8 text-gray-800">Descubre la oferta comercial, gastronómica y de conveniencia de <a href="https://ciudaddelsaber.org/" className=" text-cds-azul font-bold">Ciudad del Saber</a></p>
                 <PrincipalSlider />
                 <SquareSpaces />
+                
             </div>
-            <div className=" sm:pt-14">
+            <div className=" sm:pt-10">
+                <Survey />
                 <ParkSpaces />
                 <CardCds />
             </div>
