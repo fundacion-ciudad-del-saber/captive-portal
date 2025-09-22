@@ -9,7 +9,7 @@ const PrincipalSlider = () => {
 
     useEffect(() => {
         axios.get(`https://admin-campus.ciudaddelsaber.org/api/campus-events?populate=*`).then((res) => {
-            setEvents(res.data);
+            setEvents(res.data.data);
         });
     }, []);
 
@@ -26,16 +26,17 @@ const PrincipalSlider = () => {
 
     return (
         <Slider {...settings}>
-            {events.data?.map((objArray, id) => (
-                <div key={id} >
-                    {objArray.attributes.cover.data?.map((item, id) => (
+            {events.map((event, id) => (
+                <div key={id}>
+                    {/* Verificamos que exista cover.data y formats.small */}
+                    {event.attributes.cover?.data?.map((item, itemId) => (
                         <img
-                            key={id}
-                            className="object-cover h-[360px]  w-full rounded-lg"
-                            src={`https://admin-campus.ciudaddelsaber.org${item.attributes.formats.small.url}`}
+                            key={itemId}
+                            className="object-cover h-[360px] w-full rounded-lg"
+                            src={`https://admin-campus.ciudaddelsaber.org${item.attributes.formats?.small?.url || item.attributes.url}`}
                             width="100%"
                             height="100%"
-                            alt={objArray.attributes.Title}
+                            alt={event.attributes.Title}
                         />
                     ))}
                 </div>
@@ -44,4 +45,4 @@ const PrincipalSlider = () => {
     )
 }
 
-export default PrincipalSlider
+export default PrincipalSlider;
